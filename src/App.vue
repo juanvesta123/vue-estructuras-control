@@ -35,7 +35,7 @@ function focusContent() {
 watch(
   () => route.meta.title,
   (title) => {
-    document.title = `${title || "Estructuras de control"} | juanvesta123`;
+    document.title = title || "Estructuras de control";
   },
   { immediate: true },
 );
@@ -52,12 +52,10 @@ watch(
     >
     <header class="site-header">
       <div class="header-inner">
-        <router-link to="/" class="brand" aria-label="juanvesta123, inicio"
+        <router-link to="/" class="brand" aria-label="Inicio"
           ><svg class="brand-symbol" viewBox="0 0 32 32" aria-hidden="true">
             <path d="M3 5h7l6 11 6-11h7L16 28Z" fill="currentColor" />
             <path d="M10 5h4l2 4 2-4h4L16 16Z" fill="var(--paper)" /></svg
-          ><span
-            >juanvesta123</span
           ></router-link
         >
         <a
@@ -88,7 +86,6 @@ watch(
         </div>
       </div>
       <footer class="site-footer">
-        <span class="footer-brand">juanvesta123</span>
         <a
           href="https://github.com/juanvesta123/vue-estructuras-control/blob/main/evidencias-vue-lab.pdf"
           target="_blank"
