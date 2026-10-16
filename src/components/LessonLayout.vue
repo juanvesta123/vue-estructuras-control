@@ -1,14 +1,60 @@
 <script setup>
-defineProps({ number: String, title: String, description: String, code: String, takeaway: String })
+import { computed } from "vue";
+const props = defineProps({
+  number: String,
+  title: String,
+  description: String,
+  code: String,
+  takeaway: String,
+});
+const filename = computed(
+  () =>
+    ({
+      "01": "IfView.vue",
+      "02": "ShowView.vue",
+      "03": "ForView.vue",
+      "04": "KeyView.vue",
+    })[props.number] || "Ejemplo.vue",
+);
+const lines = computed(() => (props.code || "").split("\n"));
 </script>
 <template>
   <section class="lesson" :aria-labelledby="`lesson-${number}`">
-    <div class="lesson-heading"><div><p class="eyebrow">LECCIÓN {{ number }} / EXPLORA LA DIRECTIVA</p><h2 :id="`lesson-${number}`">{{ title }}</h2></div><span class="lesson-chip">INTERACTIVO</span></div>
+    <div class="lesson-heading">
+      <h2 :id="`lesson-${number}`">{{ title }}</h2>
+      <span class="lesson-indicator"><i class="dot"></i> Pruébalo en vivo</span>
+    </div>
     <p class="lesson-description">{{ description }}</p>
     <div class="workbench">
-      <section class="code-panel" aria-label="Ejemplo de código Vue"><div class="panel-bar"><span class="window-dots"><i></i><i></i><i></i></span><span>Ejemplo.vue</span><span class="language-tag">VUE</span></div><pre><code>{{ code }}</code></pre><div class="code-note">↳ Este código se aplica en la demostración.</div></section>
-      <section class="demo-panel" aria-label="Demostración interactiva"><div class="demo-label"><i class="dot"></i> RESULTADO EN VIVO</div><slot /></section>
+      <section class="code-panel" aria-label="Ejemplo de código Vue">
+        <div class="panel-bar">
+          <span class="code-file-icon" aria-hidden="true">&lt;/&gt;</span
+          ><span class="code-filename">{{ filename }}</span
+          ><span class="language-tag">Vue</span>
+        </div>
+        <pre
+          tabindex="0"
+          aria-label="Código del ejemplo, desplazable"
+        ><code><span v-for="(line, index) in lines" :key="index" class="code-line"><span class="line-number" aria-hidden="true">{{ index + 1 }}</span><span>{{ line || ' ' }}</span>{{ '\n' }}</span></code></pre>
+        <div class="code-note">
+          <span aria-hidden="true">↳</span> Modifica los datos. Observa el
+          resultado.
+        </div>
+      </section>
+      <section class="demo-panel" aria-label="Demostración interactiva">
+        <div class="demo-toolbar">
+          <span class="demo-label"><i class="dot"></i> Vista previa</span
+          ><span>Reactividad en tiempo real</span>
+        </div>
+        <div class="demo-content"><slot /></div>
+      </section>
     </div>
-    <div class="takeaway"><span class="tip-icon">i</span><p><strong>Qué debes recordar</strong><br>{{ takeaway }}</p></div>
+    <aside class="takeaway">
+      <span class="tip-icon" aria-hidden="true">↳</span>
+      <div>
+        <h3>La idea que te llevas</h3>
+        <p>{{ takeaway }}</p>
+      </div>
+    </aside>
   </section>
 </template>
