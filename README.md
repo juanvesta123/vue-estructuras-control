@@ -1,10 +1,15 @@
-# Vue Lab - Estructuras de control
+# Estructuras de control con Vue
 
 SPA educativa en español creada con Vue 3, Vue Router y Vite.
 
 - **Sitio compilado:** https://juanvesta123.github.io/vue-estructuras-control/
 - **Código fuente:** https://github.com/juanvesta123/vue-estructuras-control
-- **Autor:** juanvesta123
+
+## Integrantes
+
+- Nucamendi Diaz Juan Manuel
+- De los Santos Lopez Rubi Esmeralda
+- Edson S. Jiménez Silvestre
 
 ## Ejecutar
 Requiere Node.js 24 y npm.
@@ -41,11 +46,6 @@ Vite configura `base: '/vue-estructuras-control/'`. Vue Router utiliza hash hist
 Descargar el [PDF de evidencias de cumplimiento](./evidencias-vue-lab.pdf).
 
 El documento PDF de entrega incluye capturas de la interfaz publicada y del código fuente, con una captura como máximo por página y explicaciones breves. Las capturas y verificaciones se realizaron sobre el proyecto terminado.
-
-## Rediseño
-La interfaz utiliza Satoshi, superficies cálidas, un acento lima desaturado y un laboratorio adaptable. Los ejemplos y las cuatro rutas mantienen su funcionalidad. La vista previa aparece primero en móvil y el menú conserva visible el laboratorio al cambiar de lección.
-
-GSAP ScrollTrigger se carga por separado para el gráfico explicativo en escritorio. Los controles usan transiciones breves de transform y opacity, con tratamiento de movimiento reducido y teclado. La auditoría está en `docs/rediseno.md` y la revisión de movimiento en `docs/revision-animaciones.md`.
 
 ## Reproducir las capturas reales de código
 En Windows, después de `npm ci`:
