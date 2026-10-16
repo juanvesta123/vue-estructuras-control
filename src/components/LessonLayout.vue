@@ -22,7 +22,6 @@ const lines = computed(() => (props.code || "").split("\n"));
   <section class="lesson" :aria-labelledby="`lesson-${number}`">
     <div class="lesson-heading">
       <h2 :id="`lesson-${number}`">{{ title }}</h2>
-      <span class="lesson-indicator"><i class="dot"></i> Pruébalo en vivo</span>
     </div>
     <p class="lesson-description">{{ description }}</p>
     <div class="workbench">
@@ -36,21 +35,12 @@ const lines = computed(() => (props.code || "").split("\n"));
           tabindex="0"
           aria-label="Código del ejemplo, desplazable"
         ><code><span v-for="(line, index) in lines" :key="index" class="code-line"><span class="line-number" aria-hidden="true">{{ index + 1 }}</span><span>{{ line || ' ' }}</span>{{ '\n' }}</span></code></pre>
-        <div class="code-note">
-          <span aria-hidden="true">↳</span> Modifica los datos. Observa el
-          resultado.
-        </div>
       </section>
       <section class="demo-panel" aria-label="Demostración interactiva">
-        <div class="demo-toolbar">
-          <span class="demo-label"><i class="dot"></i> Vista previa</span
-          ><span>Reactividad en tiempo real</span>
-        </div>
         <div class="demo-content"><slot /></div>
       </section>
     </div>
     <aside class="takeaway">
-      <span class="tip-icon" aria-hidden="true">↳</span>
       <div>
         <h3>La idea que te llevas</h3>
         <p>{{ takeaway }}</p>
