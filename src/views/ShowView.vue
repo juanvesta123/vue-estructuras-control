@@ -9,7 +9,7 @@ const code = `const visible = ref(true)
 </button>
 
 <div v-show="visible">
-  ¡Hola! Sigo aquí, en el DOM.
+  Elemento del DOM
 </div>`;
 </script>
 <template>
@@ -20,7 +20,7 @@ const code = `const visible = ref(true)
     description="v-show muestra u oculta un elemento mediante la propiedad CSS display. El elemento siempre se renderiza y permanece en el DOM, incluso cuando no lo ves."
     takeaway="v-show resulta útil al alternar la visibilidad con frecuencia. A diferencia de v-if, ocultar el elemento no lo elimina del DOM; v-show no tiene ramas v-else."
   >
-    <h3>Ahora lo ves…</h3>
+    <h3>Visibilidad del elemento</h3>
     <p class="muted">Alterna el mensaje sin eliminar su elemento.</p>
     <button
       class="primary-button"
@@ -37,9 +37,8 @@ const code = `const visible = ref(true)
         class="message-card"
         data-testid="secret"
       >
-        <span class="message-icon">✦</span
-        ><strong>¡Hola! Sigo aquí, en el DOM.</strong>
-        <p>Mi visibilidad cambia con v-show.</p>
+        <strong>Elemento del DOM</strong>
+        <p>Visibilidad controlada con v-show.</p>
       </div>
     </div>
     <p class="state-line" aria-live="polite">
