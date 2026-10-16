@@ -27,8 +27,7 @@ const lines = computed(() => (props.code || "").split("\n"));
     <div class="workbench">
       <section class="code-panel" aria-label="Ejemplo de código Vue">
         <div class="panel-bar">
-          <span class="code-file-icon" aria-hidden="true">&lt;/&gt;</span
-          ><span class="code-filename">{{ filename }}</span
+          <span class="code-filename">{{ filename }}</span
           ><span class="language-tag">Vue</span>
         </div>
         <pre
@@ -42,7 +41,7 @@ const lines = computed(() => (props.code || "").split("\n"));
     </div>
     <aside class="takeaway">
       <div>
-        <h3>La idea que te llevas</h3>
+        <h3>Nota</h3>
         <p>{{ takeaway }}</p>
       </div>
     </aside>
