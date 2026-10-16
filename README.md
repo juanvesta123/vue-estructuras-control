@@ -41,3 +41,15 @@ Vite configura `base: '/vue-estructuras-control/'`. Vue Router utiliza hash hist
 Descargar el [PDF de evidencias de cumplimiento](./evidencias-vue-lab.pdf).
 
 El documento PDF de entrega incluye capturas de la interfaz publicada y del código fuente, con una captura como máximo por página y explicaciones breves. Las capturas y verificaciones se realizaron sobre el proyecto terminado.
+
+## Rediseño
+La interfaz utiliza Satoshi, superficies cálidas, un acento lima desaturado y un laboratorio adaptable. Los ejemplos y las cuatro rutas mantienen su funcionalidad. La vista previa aparece primero en móvil y el menú conserva visible el laboratorio al cambiar de lección.
+
+GSAP ScrollTrigger se carga por separado para el gráfico explicativo en escritorio. Los controles usan transiciones breves de transform y opacity, con tratamiento de movimiento reducido y teclado. La auditoría está en `docs/rediseno.md` y la revisión de movimiento en `docs/revision-animaciones.md`.
+
+## Reproducir las capturas reales de código
+En Windows, después de `npm ci`:
+```sh
+npm run evidence:terminal
+```
+Abre http://127.0.0.1:4182/ en el navegador. Selecciona un archivo y ejecuta `Get-Content`. La consola xterm.js recibe stdout y stderr de un proceso real de Windows PowerShell; no genera una imagen ni reescribe el código. Solo admite una lista cerrada de comandos de lectura y escucha en localhost. No forma parte del sitio público compilado.
