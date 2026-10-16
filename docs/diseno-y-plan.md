@@ -11,7 +11,7 @@ Condicional: calificación editable con tres ramas. Visibilidad: mensaje con v-s
 ## Plan de implementación
 1. Crear repositorio y configuración Vite/Vue. Escribir pruebas de comportamiento antes de vistas. Guardar commit inicial.
 2. Crear src/router/index.js, src/App.vue, src/components/LessonLayout.vue y cuatro vistas independientes. Ejecutar pruebas de ramas, visibilidad DOM, listas y conservación de inputs al reordenar. Guardar commit de SPA.
-3. Ejecutar npm run build. Publicar dist en rama gh-pages; configurar Pages. Verificar las cuatro rutas y navegación sin recarga en sitio público, también en celular. Guardar instrucciones reproducibles.
+3. Ejecutar npm run build. Publicar dist mediante GitHub Actions; configurar Pages. Verificar las cuatro rutas y navegación sin recarga en sitio público, también en celular. Guardar instrucciones reproducibles.
 4. Capturar interfaz pública, código fuente, repositorio, historial y publicación. Generar PDF con títulos, máximo una captura por página y explicaciones de hasta dos párrafos por evidencia. Renderizar e inspeccionar. Commit final de documentación y evidencias.
 
 ## Verificación
