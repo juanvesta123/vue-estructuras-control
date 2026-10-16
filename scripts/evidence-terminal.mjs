@@ -12,7 +12,7 @@ const files = {
   for: 'src/views/ForView.vue', key: 'src/views/KeyView.vue',
   router: 'src/router/index.js', nav: 'src/App.vue',
   build: '.github/workflows/deploy.yml', config: 'package.json',
-  spa: 'tests/navigation.test.js', motion: 'src/components/HeroDiagram.vue',
+  spa: 'tests/navigation.test.js',
 }
 const server = http.createServer(async (req, res) => {
   const routes = {
