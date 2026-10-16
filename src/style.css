@@ -102,9 +102,6 @@ pre {
   font-weight: 700;
   border-bottom: 1px solid var(--ink);
 }
-.intro {
-  padding: 86px 0 68px;
-}
 .dot {
   display: inline-block;
   flex-shrink: 0;
@@ -113,26 +110,8 @@ pre {
   border-radius: 50%;
   background: #6c803b;
 }
-h1 {
-  max-width: 72rem;
-  font-size: clamp(3rem, 5.6vw, 5.25rem);
-  font-weight: 700;
-  letter-spacing: -0.075em;
-  line-height: 1.02;
-  text-wrap: balance;
-}
-h1 > span {
-  color: #737b60;
-}
-.intro-copy {
-  max-width: 54ch;
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.75;
-  margin-top: 25px;
-  text-wrap: pretty;
-}
 .lab-area {
+  padding-top: 52px;
   scroll-margin-top: 24px;
   outline: none;
 }
@@ -624,19 +603,8 @@ input[type="range"] {
     font-size: 11px;
     gap: 12px;
   }
-  .intro {
-    padding: 47px 0 40px;
-  }
-  h1 {
-    font-size: clamp(2.7rem, 8vw, 4.5rem);
-    letter-spacing: -0.065em;
-  }
-  .intro-copy {
-    font-size: 14px;
-    margin-top: 22px;
-  }
-  .desktop-break {
-    display: none;
+  .lab-area {
+    padding-top: 28px;
   }
   .lesson-nav {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -717,9 +685,6 @@ input[type="range"] {
   .repo-link {
     font-size: 10px;
     gap: 8px;
-  }
-  h1 {
-    font-size: 38px;
   }
   .demo-content {
     padding: 25px 17px;

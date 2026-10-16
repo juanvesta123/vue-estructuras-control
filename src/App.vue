@@ -70,19 +70,6 @@ watch(
       </div>
     </header>
     <main class="shell">
-      <section class="intro" aria-labelledby="intro-title">
-        <div class="intro-text">
-          <h1 id="intro-title">
-            Menos teoría.<br /><span>Más interacción.</span>
-          </h1>
-          <p class="intro-copy">
-            Una condición. Una lista. Un cambio de estado.<br
-              class="desktop-break"
-            />
-            Descubre cómo unas pocas líneas dan vida a tu interfaz.
-          </p>
-        </div>
-      </section>
       <div class="lab-area" id="contenido" tabindex="-1">
         <nav class="lesson-nav" aria-label="Lecciones de Vue">
           <router-link
