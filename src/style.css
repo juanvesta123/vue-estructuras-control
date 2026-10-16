@@ -92,50 +92,18 @@ pre {
   width: 32px;
   height: 32px;
 }
-.brand-light {
-  font-weight: 500;
-}
-.brand-dot {
-  color: #788b4b;
-  margin-left: 2px;
-}
-.header-caption {
-  font-size: 12px;
-  line-height: 1.5;
-  color: var(--ink);
-}
-.header-caption span {
-  color: var(--muted);
-}
 .repo-link {
   margin-left: auto;
   min-height: 44px;
   display: inline-flex;
   align-items: center;
-  gap: 27px;
+  gap: 0;
   font-size: 13px;
   font-weight: 700;
   border-bottom: 1px solid var(--ink);
 }
-.repo-link > span,
-.intro-action > span {
-  display: inline-block;
-  transition: transform 160ms var(--ease-out);
-}
 .intro {
-  display: grid;
-  grid-template-columns: 1.25fr 1fr;
-  gap: 44px;
-  align-items: center;
-  padding: 86px 0 96px;
-}
-.intro-kicker {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  font-size: 12px;
-  color: var(--muted);
-  margin-bottom: 25px;
+  padding: 86px 0 68px;
 }
 .dot {
   display: inline-block;
@@ -164,147 +132,9 @@ h1 > span {
   margin-top: 25px;
   text-wrap: pretty;
 }
-.intro-action {
-  display: inline-flex;
-  align-items: center;
-  gap: 34px;
-  background: var(--ink);
-  color: #fafbf5;
-  padding: 16px 20px;
-  border-radius: 4px;
-  font-size: 13px;
-  font-weight: 500;
-  margin-top: 30px;
-}
-.hero-diagram {
-  position: relative;
-  padding: 14px 0 0 4px;
-}
-.diagram-surface {
-  aspect-ratio: 1.2;
-  position: relative;
-  overflow: hidden;
-  border-radius: 6px;
-  border: 1px solid #d7dbc8;
-  background-color: #e7ebda;
-  background-image: radial-gradient(#aeb89b 0.65px, transparent 0.65px);
-  background-size: 18px 18px;
-}
-.diagram-topline,
-.diagram-bottomline {
-  position: absolute;
-  left: 25px;
-  right: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 1;
-}
-.diagram-topline {
-  top: 23px;
-  font-size: 11px;
-  color: #657052;
-}
-.diagram-corner {
-  font-family: Consolas, monospace;
-  font-size: 16px;
-}
-.diagram-bottomline {
-  bottom: 23px;
-  justify-content: flex-start;
-  gap: 13px;
-  font-size: 12px;
-  color: #586343;
-}
-.diagram-orbit {
-  position: absolute;
-  border: 1px solid #b7c39a;
-  border-radius: 50%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) rotate(-30deg);
-}
-.orbit-outer {
-  width: 80%;
-  height: 62%;
-}
-.orbit-inner {
-  width: 57%;
-  height: 44%;
-  border-style: dashed;
-}
-.directive-symbol {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-9deg);
-  white-space: nowrap;
-  font-size: clamp(38px, 4.8vw, 70px);
-  font-weight: 700;
-  letter-spacing: -0.07em;
-  color: #4b5a2e;
-}
-.diagram-node {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  background: #fbfcf5;
-  border: 1px solid #c9d1b6;
-  border-radius: 5px;
-  padding: 12px 14px;
-  font-size: 12px;
-  box-shadow: 0 6px 16px #495a2110;
-}
-.node-data {
-  left: 9%;
-  top: 27%;
-  transform: rotate(-5deg);
-}
-.node-view {
-  right: 7%;
-  bottom: 26%;
-  transform: rotate(4deg);
-}
-.node-icon {
-  font-family: Consolas, monospace;
-  font-size: 14px;
-  color: #667744;
-}
-.diagram-node i {
-  width: 5px;
-  height: 5px;
-  background: #a5b572;
-  border-radius: 50%;
-  margin-left: 7px;
-}
-.diagram-coordinate {
-  position: absolute;
-  font:
-    10px Consolas,
-    monospace;
-  color: #778462;
-}
-.coordinate-a {
-  left: 14%;
-  bottom: 28%;
-}
-.coordinate-b {
-  right: 12%;
-  top: 29%;
-}
 .lab-area {
   scroll-margin-top: 24px;
   outline: none;
-}
-.lab-heading {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 18px;
-  font-size: 13px;
-}
-.lab-heading > span {
-  color: var(--muted);
 }
 .lesson-nav {
   display: grid;
@@ -343,11 +173,6 @@ h1 > span {
 .router-link-active .nav-label {
   color: #c6cbb8;
 }
-.nav-arrow {
-  margin-left: auto;
-  font-size: 16px;
-  transition: transform 160ms var(--ease-out);
-}
 .lesson-heading {
   display: flex;
   align-items: center;
@@ -360,14 +185,6 @@ h2 {
   line-height: 1.18;
   letter-spacing: -0.055em;
   text-wrap: balance;
-}
-.lesson-indicator {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--muted);
-  font-size: 11px;
-  white-space: nowrap;
 }
 .lesson-description {
   font-size: 15px;
@@ -439,37 +256,11 @@ pre {
   text-align: right;
   user-select: none;
 }
-.code-note {
-  border-top: 1px solid #414838;
-  padding: 15px 23px;
-  color: #a3af94;
-  font-size: 11px;
-  display: flex;
-  gap: 9px;
-}
 .demo-panel {
   display: flex;
   flex-direction: column;
   background: var(--surface);
   border: 1px solid var(--line);
-}
-.demo-toolbar {
-  padding: 18px 23px;
-  border-bottom: 1px solid #e8e9df;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-.demo-label {
-  display: inline-flex;
-  gap: 8px;
-  align-items: center;
-  font-size: 12px;
-}
-.demo-toolbar > span:last-child {
-  font-size: 10px;
-  color: #7b8171;
 }
 .demo-content {
   padding: 32px 32px 28px;
@@ -556,14 +347,9 @@ input[type="range"] {
   padding: 22px 25px;
   display: flex;
   align-items: flex-start;
-  gap: 22px;
+  gap: 0;
   background: #e9ece0;
   border-radius: 5px;
-}
-.tip-icon {
-  font-size: 22px;
-  line-height: 1;
-  color: #758453;
 }
 .takeaway h3 {
   font-size: 13px;
@@ -592,15 +378,13 @@ input[type="range"] {
   font-weight: 700;
 }
 .primary-button,
-.remove-button,
-.intro-action {
+.remove-button {
   transition:
     transform 100ms var(--ease-out),
     opacity 160ms ease;
 }
 .primary-button:active:not(:disabled),
-.remove-button:active,
-.intro-action:active {
+.remove-button:active {
   transform: scale(0.97);
   transition-duration: 120ms;
 }
@@ -733,15 +517,10 @@ input[type="range"] {
 }
 .lesson-continuation {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   gap: 20px;
   padding: 58px 0 65px;
-}
-.lesson-continuation p {
-  color: var(--muted);
-  font-size: 15px;
-  line-height: 1.6;
 }
 .lesson-continuation strong {
   color: var(--ink);
@@ -752,15 +531,7 @@ input[type="range"] {
   border-bottom: 1px solid #9aa384;
   padding: 12px 0;
 }
-.next-lesson > span {
-  display: block;
-  font-size: 11px;
-  color: var(--muted);
-  margin-bottom: 8px;
-}
 .next-lesson > strong {
-  display: flex;
-  justify-content: space-between;
   font-size: 23px;
   letter-spacing: -0.6px;
 }
@@ -780,13 +551,6 @@ input[type="range"] {
   font-size: 16px;
   font-weight: 700;
   letter-spacing: -0.5px;
-}
-.footer-brand > span {
-  margin-left: 13px;
-  font-size: 10px;
-  font-weight: 400;
-  letter-spacing: 0;
-  color: var(--muted);
 }
 .site-footer a {
   padding: 12px 0;
@@ -819,13 +583,6 @@ input[type="range"] {
   .lesson-nav a:not(.router-link-active):hover {
     background: #dfe5d0;
   }
-  .lesson-nav a:hover .nav-arrow,
-  .repo-link:hover > span {
-    transform: translate(2px, -2px);
-  }
-  .intro-action:hover > span {
-    transform: translateY(3px);
-  }
   .primary-button:hover:not(:disabled) {
     opacity: 0.82;
   }
@@ -834,9 +591,6 @@ input[type="range"] {
   }
 }
 @media (min-width: 801px) and (max-width: 1100px) {
-  .intro {
-    gap: 25px;
-  }
   .lesson-nav a {
     padding: 15px 12px;
     gap: 6px;
@@ -858,9 +612,6 @@ input[type="range"] {
     min-height: 84px;
     gap: 15px;
   }
-  .header-caption {
-    display: none;
-  }
   .brand {
     font-size: 26px;
     gap: 9px;
@@ -874,64 +625,17 @@ input[type="range"] {
     gap: 12px;
   }
   .intro {
-    grid-template-columns: 1fr;
-    padding: 47px 0 56px;
-    gap: 34px;
+    padding: 47px 0 40px;
   }
   h1 {
     font-size: clamp(2.7rem, 8vw, 4.5rem);
     letter-spacing: -0.065em;
   }
-  .intro-kicker {
-    margin-bottom: 21px;
-    font-size: 11px;
-  }
   .intro-copy {
     font-size: 14px;
     margin-top: 22px;
   }
-  .intro-action {
-    margin-top: 23px;
-  }
   .desktop-break {
-    display: none;
-  }
-  .hero-diagram {
-    padding: 0;
-  }
-  .diagram-surface {
-    aspect-ratio: 1.7;
-  }
-  .directive-symbol {
-    font-size: 45px;
-  }
-  .diagram-node {
-    padding: 9px 12px;
-    font-size: 10px;
-  }
-  .diagram-topline {
-    top: 16px;
-    font-size: 10px;
-  }
-  .diagram-bottomline {
-    bottom: 16px;
-    font-size: 10px;
-  }
-  .diagram-coordinate {
-    display: none;
-  }
-  .node-data {
-    top: 30%;
-    left: 8%;
-  }
-  .node-view {
-    bottom: 27%;
-    right: 5%;
-  }
-  .lab-heading {
-    font-size: 12px;
-  }
-  .lab-heading > span {
     display: none;
   }
   .lesson-nav {
@@ -951,14 +655,8 @@ input[type="range"] {
     flex-basis: 100%;
     order: 3;
   }
-  .lesson-heading {
-    display: block;
-  }
   h2 {
     font-size: 30px;
-  }
-  .lesson-indicator {
-    margin-top: 14px;
   }
   .lesson-description {
     margin: 17px 0 25px;
@@ -974,12 +672,8 @@ input[type="range"] {
   .demo-content {
     padding: 27px 22px;
   }
-  .demo-toolbar,
   .panel-bar {
     padding: 16px 20px;
-  }
-  .demo-toolbar > span:last-child {
-    display: none;
   }
   pre {
     padding: 23px 16px;
@@ -1005,9 +699,6 @@ input[type="range"] {
   .lesson-continuation {
     padding: 37px 0 42px;
   }
-  .lesson-continuation p {
-    font-size: 12px;
-  }
   .next-lesson {
     min-width: 140px;
   }
@@ -1016,11 +707,6 @@ input[type="range"] {
   }
   .site-footer {
     gap: 12px;
-  }
-  .site-footer > p {
-    flex-basis: 100%;
-    order: 3;
-    font-size: 10px;
   }
 }
 @media (max-width: 360px) {
@@ -1035,18 +721,6 @@ input[type="range"] {
   h1 {
     font-size: 38px;
   }
-  .node-data {
-    left: 4%;
-  }
-  .node-view {
-    right: 4%;
-  }
-  .diagram-node {
-    padding: 7px 9px;
-  }
-  .directive-symbol {
-    font-size: 36px;
-  }
   .demo-content {
     padding: 25px 17px;
   }
@@ -1059,34 +733,16 @@ input[type="range"] {
 }
 @media (prefers-reduced-motion: reduce) {
   .primary-button,
-  .remove-button,
-  .intro-action {
+  .remove-button {
     transition: opacity 160ms ease;
   }
   .primary-button:active,
-  .remove-button:active,
-  .intro-action:active {
+  .remove-button:active {
     transform: none;
-  }
-  .nav-arrow,
-  .repo-link > span,
-  .intro-action > span {
-    transition: none;
-    transform: none !important;
-  }
-  .diagram-surface {
-    transform: none !important;
-  }
-  .flow-word {
-    opacity: 1 !important;
   }
 }
 [data-input="keyboard"] .primary-button,
-[data-input="keyboard"] .remove-button,
-[data-input="keyboard"] .intro-action,
-[data-input="keyboard"] .nav-arrow,
-[data-input="keyboard"] .repo-link > span,
-[data-input="keyboard"] .intro-action > span {
+[data-input="keyboard"] .remove-button {
   transition: none;
   transform: none !important;
 }

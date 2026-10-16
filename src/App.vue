@@ -1,7 +1,6 @@
 <script setup>
 import { computed, ref, watch } from "vue";
 import { useRoute } from "vue-router";
-import HeroDiagram from "./components/HeroDiagram.vue";
 const route = useRoute();
 const inputMode = ref("pointer");
 const lessons = [
@@ -36,7 +35,7 @@ function focusContent() {
 watch(
   () => route.meta.title,
   (title) => {
-    document.title = `${title || "Estructuras de control"} | Vue Lab`;
+    document.title = `${title || "Estructuras de control"} | juanvesta123`;
   },
   { immediate: true },
 );
@@ -53,33 +52,26 @@ watch(
     >
     <header class="site-header">
       <div class="header-inner">
-        <router-link to="/" class="brand" aria-label="Vue Lab, inicio"
+        <router-link to="/" class="brand" aria-label="juanvesta123, inicio"
           ><svg class="brand-symbol" viewBox="0 0 32 32" aria-hidden="true">
             <path d="M3 5h7l6 11 6-11h7L16 28Z" fill="currentColor" />
             <path d="M10 5h4l2 4 2-4h4L16 16Z" fill="var(--paper)" /></svg
           ><span
-            >vue<span class="brand-light">lab</span
-            ><span class="brand-dot">/</span></span
+            >juanvesta123</span
           ></router-link
         >
-        <p class="header-caption">
-          Un laboratorio de ideas<br /><span>con Vue 3 y Vue Router.</span>
-        </p>
         <a
           class="repo-link"
           href="https://github.com/juanvesta123/vue-estructuras-control"
           target="_blank"
           rel="noopener noreferrer"
-          >Explorar el código <span aria-hidden="true">↗</span></a
+          >Repositorio</a
         >
       </div>
     </header>
     <main class="shell">
       <section class="intro" aria-labelledby="intro-title">
         <div class="intro-text">
-          <p class="intro-kicker">
-            <span class="dot"></span> Aprende Vue experimentando
-          </p>
           <h1 id="intro-title">
             Menos teoría.<br /><span>Más interacción.</span>
           </h1>
@@ -89,57 +81,32 @@ watch(
             />
             Descubre cómo unas pocas líneas dan vida a tu interfaz.
           </p>
-          <a
-            class="intro-action"
-            href="#contenido"
-            @click.prevent="focusContent"
-            >Abre el laboratorio <span aria-hidden="true">↓</span></a
-          >
         </div>
-        <HeroDiagram
-          :motion-allowed="inputMode === 'pointer'"
-          :directive="lessons[currentIndex].directive"
-        />
       </section>
       <div class="lab-area" id="contenido" tabindex="-1">
-        <div class="lab-heading">
-          <p>Elige qué quieres explorar</p>
-          <span>Tu código, en acción.</span>
-        </div>
         <nav class="lesson-nav" aria-label="Lecciones de Vue">
           <router-link
             v-for="lesson in lessons"
             :key="lesson.path"
             :to="lesson.path"
             ><span class="nav-directive">{{ lesson.directive }}</span
-            ><span class="nav-label">{{ lesson.title }}</span
-            ><span class="nav-arrow" aria-hidden="true">↗</span></router-link
+            ><span class="nav-label">{{ lesson.title }}</span></router-link
           >
         </nav>
         <router-view />
         <div class="lesson-continuation">
-          <p>
-            La mejor forma de entenderlo<br /><strong
-              >es cambiarlo tú mismo.</strong
-            >
-          </p>
           <router-link class="next-lesson" :to="nextLesson.path"
-            ><span>Sigue explorando</span
-            ><strong
-              >{{ nextLesson.directive }}
-              <span aria-hidden="true">→</span></strong
-            ></router-link
+            ><strong>{{ nextLesson.directive }}</strong></router-link
           >
         </div>
       </div>
       <footer class="site-footer">
-        <span class="footer-brand">vuelab/ <span>por juanvesta123</span></span>
-        <p>Hecho con Vue 3. Construido para aprender.</p>
+        <span class="footer-brand">juanvesta123</span>
         <a
           href="https://github.com/juanvesta123/vue-estructuras-control/blob/main/evidencias-vue-lab.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          >Ver evidencias <span aria-hidden="true">↗</span></a
+          >Evidencias</a
         >
       </footer>
     </main>
