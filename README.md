@@ -38,4 +38,6 @@ En Settings > Pages se utiliza GitHub Actions. El workflow `.github/workflows/de
 Vite configura `base: '/vue-estructuras-control/'`. Vue Router utiliza hash history para permitir enlaces directos y recargas en GitHub Pages sin un servidor de redirecciones. Los cambios de lección son navegación SPA sin recargar el documento.
 
 ## Evidencias
+Descargar el [PDF de evidencias de cumplimiento](./evidencias-vue-lab.pdf).
+
 El documento PDF de entrega incluye capturas de la interfaz publicada y del código fuente, con una captura como máximo por página y explicaciones breves. Las capturas y verificaciones se realizaron sobre el proyecto terminado.
