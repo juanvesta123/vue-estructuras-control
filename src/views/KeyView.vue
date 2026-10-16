@@ -33,7 +33,7 @@ const code = `const tarjetas = ref([
     <h3>El orden cambia. La identidad no.</h3>
     <p class="muted">Escribe en una tarjeta y luego invierte la lista.</p>
     <button class="primary-button" @click="tarjetas.reverse()">
-      Invertir orden <span>⇅</span>
+      Invertir orden
     </button>
     <ul class="key-list">
       <li
@@ -55,7 +55,7 @@ const code = `const tarjetas = ref([
       </li>
     </ul>
     <p class="state-line" aria-live="polite">
-      <i class="dot"></i> Orden: {{ tarjetas.map((t) => t.id).join(" → ") }}
+      <i class="dot"></i> Orden: {{ tarjetas.map((t) => t.id).join(", ") }}
     </p>
   </LessonLayout>
 </template>

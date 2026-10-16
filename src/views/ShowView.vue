@@ -28,7 +28,7 @@ const code = `const visible = ref(true)
       :aria-expanded="visible"
       aria-controls="mensaje"
     >
-      {{ visible ? "Ocultar mensaje" : "Mostrar mensaje" }} <span>↗</span>
+      {{ visible ? "Ocultar mensaje" : "Mostrar mensaje" }}
     </button>
     <div class="visibility-stage">
       <div
